@@ -1,3 +1,322 @@
+:root {
+    --header_border: #CACACA;
+    --text_color : #7D7D7D;
+    --btn_next_backgound : #E47C17;
+    --btn_back_backgound : #575757;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+    /* font-weight: 300; */
+}
+.frp_container{
+    display: flex;
+    padding: 12px;
+}
+.frp_sidebar{
+    background: #000000;
+    color: #FFFFFF;
+    width: 20%;
+    min-height: 100vh;
+}
+.frp_sidebar .frp_sidebar_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(24px + 3vh);
+    margin-bottom: 3vh;
+}
+.frp_sidebar .frp_text_after_logo{
+    font-size: 1vw;
+    letter-spacing: 1.1px;
+    font-weight: 200;
+    color: var(--text_color);
+    padding: 1vw;
+}
+.frp_sidebar .frp_sidebar_option{
+    position: relative;
+    border-bottom: 1px solid var(--text_color);
+    color: var(--text_color);
+    display: flex;
+    justify-content: center;
+    padding: 7vh 0;
+    font-size: 1vw;
+}
+.frp_sidebar .frp_sidebar_option .frp_option_count{
+    position: absolute;
+    bottom: -1vh;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: bold;
+}
+.frp_sidebar .frp_triangle_right {
+    position: absolute;
+    bottom: -1vw;
+    right: -1vw;
+	width: 0;
+	height: 0;
+	border-top: 1vw solid transparent;
+	border-left: 1.5vw solid #000000;
+	border-bottom: 1vw solid transparent;
+}
+.frp_sidebar .frp_triangle_left{
+    position: absolute;
+    bottom: -.25vw;
+    right: 0;
+	width: 0;
+	height: 0;
+	border-top: .25vw solid transparent;
+	border-right: .5vw solid var(--text_color);
+	border-bottom: .25vw solid transparent;
+}
+/* content */
+/* header */
+.frp_content{
+    width: 80%;
+}
+.frp_model_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.frp_content .frp_model_header{
+    border-top: 1px solid var(--header_border);
+    border-bottom: 2px solid var(--header_border);
+}
+.frp_content .frp_model_header .frp_header_btn{
+    padding: .5vw 2vw;
+    border: none;
+    outline: none;
+    margin-right: -2px;
+    color: #000000;
+    background: #E47C17;
+}
+.frp_content .frp_model_header .frp_header_buttons{
+    position: relative;
+    
+    width: 85%;
+}
+.frp_content .frp_model_header .frp_content_header_love_img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.frp_content .frp_model_header .frp_content_header_find_dealer{
+    font-size: 1vw;
+    background-color: #000000;
+    color: var(--text_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1vw;
+    gap: 10px;
+}
+/* choose your model */
+.frp_choose_your_model_content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40vh;
+    /* align-items: center; */
+    padding: 4vw;
+}
+.frp_choose_your_model_content .frp_choose_your_model_text{
+    padding: 2vw 0 3vw 0;
+}
+.frp_choose_your_model_content .frp_choose_model_options{
+    display: flex;
+    gap: 2vw;
+}
+.frp_choose_your_model_content .frp_choose_model_options .frp_model{
+    display: flex;
+    flex-direction: column;
+    gap: .8vw;
+    font-size: 1vw;
+    color: var(--text_color);
+}
+.frp_choose_your_model_content .frp_choose_model_options .frp_model label{
+    display: flex;
+    gap: 0.4vw;
+    align-items: center;
+}
+/* next button  */
+.frp_choose_your_model_content .frp_next_btn{
+    display: flex;
+    justify-content: end;
+    margin: 20vh 10vh;
+}
+.frp_choose_your_model_content .frp_next_btn button{
+    padding: .5vw 2.5vw;
+    border: none;
+    background: #E47C17;
+    color: #FFFFFF;
+}
+
+/* size css */
+.frp_choose_content{
+    padding: 3vw;
+}
+.frp_main_content .frp_choose_content{
+    width: 55%;
+}
+.frp_main_content .frp_choose_content .frp_choose_text{
+    font-size: 18px;
+    padding: 8px 0 16px 0;
+}
+.frp_choose_size_options section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1vw 0;
+}
+.frp_size_fields{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+    letter-spacing: -0.12px;
+    font-size: 12px;
+}
+.frp_content .frp_main_content{
+    display: flex;
+    color: var(--text_color);
+}
+.frp_right_side_content .frp_you_are_designing_text{
+    padding: 1.5vh 0 4vh 0;
+    font-size: 18px;
+}
+
+.frp_main_content .frp_right_side_content{
+    border-left: 2px solid var(--header_border);
+    padding: 3vw;
+    width: 40%;
+}
+.frp_main_content .frp_right_side_content .frp_data_title{
+    font-weight: bold;
+    color: #000000;
+}
+.frp_main_content .frp_right_side_content .frp_data_title span{
+    font-size: 16px;
+}
+.frp_main_content .frp_right_side_content .frp_product_details{
+    font-size: 1.1vw;
+}
+.frp_main_content .frp_right_side_content .frp_product_details p{
+    padding-bottom: 6px;
+}
+.frp_main_content .frp_right_side_content .frp_product_image{
+    display: flex;
+    justify-content: center;
+    margin: 25vh 0;
+}
+.frp_main_content .frp_right_side_content .frp_btns{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10vh;
+}
+.frp_main_content .frp_right_side_content .frp_btns .frp_back_btn{
+    padding: 0.5vw 2.5vw;
+    background: var(--btn_back_backgound);
+    border: none;
+    color: #FFFFFF;
+}
+.frp_main_content .frp_right_side_content .frp_btns .frp_next_btn{
+    padding: 0.5vw 2.5vw;
+    background: var(--btn_next_backgound);
+    border: none;
+    color: #FFFFFF;
+}
+/* header btn */
+.frp_content .frp_model_header .model_btn_in_size{
+    background: #939191;
+}
+.frp_sidebar .frp_sidebar_option .active_choose_size{
+    color: #575757;
+}
+/* background css */
+.frp_main_content .frp_choose_fields{
+    display: flex;
+    gap: 12px;
+}
+.frp_main_content .frp_choose_text{
+    margin: 5vh 0;
+}
+.frp_main_content .frp_choose_fields .frp_background{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.frp_main_content .frp_choose_fields .frp_background label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #000000;
+}
+.frp_sidebar .frp_sidebar_option .count_in_background{
+    color: #838383;
+}
+.frp_content .frp_model_header .btn_in_background{
+    background: #939191;
+}
+/* Burner css */
+.frp_main_content .frp_choose_burner{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.frp_main_content .frp_choose_burner .frp_burner{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.frp_main_content .frp_choose_burner .frp_burner label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #000000;
+}
+.frp_sidebar .frp_sidebar_option .count_in_burner{
+    color: #838383;
+}
+.frp_content .frp_model_header .btn_in_burner{
+    background: #939191;
+}
+
+/* locate dealer location */
+.frp_locate_dealer_search_div{
+    width: 25%;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .frp_fireplace_container *{
     padding: 0;
     margin: 0;
