@@ -18,7 +18,7 @@
 .frp_sidebar{
     background: #000000;
     color: #FFFFFF;
-    width: 20%;
+    width: 18%;
     min-height: 100vh;
 }
 .frp_sidebar .frp_sidebar_logo{
@@ -29,7 +29,7 @@
     margin-bottom: 3vh;
 }
 .frp_sidebar .frp_text_after_logo{
-    font-size: 1vw;
+    font-size: calc(6px + 0.5vmax);
     letter-spacing: 1.1px;
     font-weight: 200;
     color: var(--text_color);
@@ -41,7 +41,7 @@
     color: var(--text_color);
     display: flex;
     justify-content: center;
-    padding: 7vh 0;
+    padding: calc(4px + 2vmax) 0;
     font-size: 1vw;
 }
 .frp_sidebar .frp_sidebar_option .frp_option_count{
@@ -49,7 +49,7 @@
     bottom: -1vh;
     left: 0;
     color: #FFFFFF;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: bold;
 }
 .frp_sidebar .frp_triangle_right {
@@ -75,7 +75,7 @@
 /* content */
 /* header */
 .frp_content{
-    width: 80%;
+    width: 82%;
 }
 .frp_model_header{
     display: flex;
@@ -160,7 +160,7 @@
     padding: 3vw;
 }
 .frp_main_content .frp_choose_content{
-    width: 55%;
+    width: 60%;
 }
 .frp_main_content .frp_choose_content .frp_choose_text{
     font-size: 18px;
@@ -296,15 +296,116 @@
     margin-left: auto;
 }
 
+/* media css */
+.frp_main_content .frp_choose_media_items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 5vh;
+}
+.frp_main_content .frp_choose_media_items .frp_media_item{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #575757;
+    font-weight: 400;
+}
+.frp_main_content .frp_choose_media_items .frp_media_item label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(8px + 0.5vmax);
+    margin-top: calc(4px + 0.5vmax);
+}
+.frp_sidebar .frp_sidebar_option .count_in_media{
+    color: #838383;
+}
+.frp_content .frp_model_header .btn_in_media{
+    background: #939191;
+}
 
 
-
-
-
-
-
-
-
+/* room scene css */
+.frp_sidebar .frp_sidebar_option .count_in_room_scene{
+    color: #838383;
+}
+.frp_content .frp_model_header .btn_in_room_scene{
+    background: #939191;
+}
+.frp_main_content .frp_choose_room_scene_items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: calc(12px + 1.5vmax);
+    row-gap: 5vh;
+}
+.frp_main_content .frp_choose_room_scene_items .frp_room_scene_item{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #575757;
+    font-weight: 400;
+}
+.frp_main_content .frp_choose_room_scene_items .frp_room_scene_item label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: calc(4px + 0.5vmax);
+}
+.frp_main_content .frp_room_scene_upload_file{
+    padding: calc(24px + 4.5vmax) 0 calc(24px + 2vmax) 0 ;
+}
+.frp_main_content .frp_room_scene_upload_file .frp_upload_file_what_to_see_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 16px;
+}
+.frp_main_content .frp_room_scene_upload_file .frp_uplaod_file_btn{
+    padding: 6px 12px;
+    border: none;
+    background: var(--btn_next_backgound);
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.frp_right_side_content .frp_room_scene_right_content_details_data table{
+    border-collapse: collapse;
+    width: 100%;
+}
+/* .frp_right_side_content .frp_room_scene_right_content_details_data table, */
+.frp_right_side_content .frp_room_scene_right_content_details_data td{
+    border-bottom: 2px solid var(--header_border);
+    text-align: left;
+    padding: 12px calc(12px + 5vmax) 12px 0;
+    font-size: 12px;
+}
+.frp_right_side_content .frp_room_scene_right_content_details_data th{
+    border-bottom: 2px solid #000000;
+    text-align: left;
+    padding: 12px calc(12px + 5vmax) 12px 0;
+    font-size: 12px;
+    color: #000000;
+}
+.frp_right_side_content .frp_room_scene_right_content_details_data tr td:first-child{
+    color: #E47C17;
+}
+.frp_right_content_for_room_scene{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(24px + 2.5vmax);
+}
+.frp_right_content_for_room_scene .frp_save_wishlist_get_quote_find_dealer{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.frp_right_content_for_room_scene .frp_save_wishlist_get_quote_find_dealer .frp_wishlist_quote_dealer{
+    background: #000000;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding: 12px;
+}
 
 
 
