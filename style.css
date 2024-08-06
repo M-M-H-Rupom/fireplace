@@ -55,6 +55,13 @@
     padding: calc(4px + 2vmax) 0;
     font-size: 1vw;
 }
+.frp_sidebar .frp_sidebar_reset{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+}
 .frp_sidebar .frp_sidebar_option .frp_option_count{
     position: absolute;
     bottom: -1vh;
@@ -86,6 +93,12 @@
 	border-right: .5vw solid var(--text_color);
 	border-bottom: .25vw solid transparent;
 }
+
+.frp_container .frp_background_image img{
+    width: 100%;
+    height: 100%;
+}
+
 /* content */
 /* header */
 .frp_content{
@@ -95,13 +108,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    justify-content: center;
 }
 .frp_content .frp_content_header{
     border-top: 1px solid var(--header_border);
     border-bottom: 2px solid var(--header_border);
 }
 .frp_content .frp_content_header .frp_header_menu_item{
-    padding: .5vw 1.5vw;
+    padding: 0.6vw 1.5vw;
     border: none;
     outline: none;
     margin-right: -2px;
@@ -123,7 +137,8 @@
    font-size: 14px;
 }
 .frp_content .frp_content_header .frp_content_header_love_img{
-   margin-right: 4px;
+   margin-right: 8px;
+   padding: 4px 0 0 0;
 }
 .frp_content .frp_content_header .frp_content_header_find_dealer{
     font-size: 12px;
@@ -331,7 +346,7 @@
 .frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_locate_dealer_text_field input[type="text"]{
     width: 100%;
     margin: auto;
-    padding: 12px;
+    padding: 20px;
     background: var(--custom_select_background);
     color: var(--locate_field_color);
     border: none;
@@ -340,12 +355,12 @@
 .frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_locate_dealer_text_field input::placeholder{
     color: var(--locate_field_color);
 }
-.frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_search_radius_text{
+.frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_custom_select_text{
     display: flex;
     justify-content: space-between;
     background: var(--custom_select_background);
     color: var(--locate_field_color);
-    padding: 12px;
+    padding: 20px;
     width: 100%;
 }
 .frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_select_items{
@@ -368,8 +383,18 @@
     font-size: 22px;
     border: none;
     font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
-
+.frp_locate_dealer_search_div .frp_locate_dealer_fields .frp_search_btn button img{
+    display: flex;
+    align-items: center;
+    width: 36px;
+    /* height: 28px; */
+}
 .frp_locate_dealer_search_div .frp_locate_dealer_locate_content_data{
     width: 70%;
     height: 50vh;
@@ -424,23 +449,6 @@
 .frp_locate_dealer_search_div .frp_locate_dealer_locate_content_data .locate_data_item_details span a{
     color: var(--website_link_color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -542,12 +550,37 @@
     font-size: 10px;
     color: #FFFFFF;
     padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.frp_right_content_room_scene_or_turn_me_on .frp_save_wishlist_get_quote_find_dealer .frp_wishlist_quote_dealer img{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
 }
 .frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     font-size: 12px;
+}
+.frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons img{
+    display: flex;
+    align-items: center;
+}
+.frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons .share_icon_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #000000;
+
 }
 /* turn me on */
 .frp_main_content .content_turn_on_me{
@@ -572,10 +605,10 @@
 .frp_fireplace_container{
     position: relative;
 }
-.frp_container .frp_fireplace_background_img{
+/* .frp_container .frp_fireplace_background_img{
     width: 100%;
     min-height: 100vh;
-}
+} */
 
 .frp_container .frp_fireplace_fire_img{
     position: absolute;
@@ -584,15 +617,15 @@
 }
 /* firebase design studio */
 .frp_fireplace_container .frp_fireplace_design_studio_div{
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 300;
-    background-color: #666667;
-    color: #FFFFFF;
     position: absolute;
     top: 0;
     right: 10%;
     width: 25%;
-    min-height: 100vh;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    background-color: #666667;
+    color: #FFFFFF;
+    min-height: 100%;
     padding: 0 24px;
     display: flex;
     flex-direction: column;
