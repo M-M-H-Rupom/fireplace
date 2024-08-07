@@ -1,6 +1,7 @@
 :root {
     --black : #000000;
     --white : #FFFFFF;
+    --sidebar_item_bottom_border: #707070;
     --a_background : #E47C17;
     --header_border: #CACACA;
     --text_color : #919191;
@@ -21,10 +22,25 @@
     font-family: "Titillium Web", sans-serif;
     /* font-weight: 300; */
 }
+@media (max-width: 1024px){
+    .frp_container{
+        min-width: 1024px;
+        overflow-x: scroll;
+        color: red;
+    }
+    .frp_main_content .frp_choose_media_items{
+       display: flex;
+       justify-content: center;
+    }
+    .frp_container .frp_sidebar .frp_text_after_logo{
+        font-size: 10px;
+        letter-spacing: 1.1px;
+    }
+    
+}
 .frp_container{
     display: flex;
     width: 100%;
-    /* padding: 12px; */
 }
 .frp_sidebar{
     background: #000000;
@@ -40,7 +56,7 @@
     margin-bottom: 3vh;
 }
 .frp_sidebar .frp_text_after_logo{
-    font-size: calc(6px + 0.5vmax);
+    font-size: 16px;
     letter-spacing: 1.1px;
     font-weight: 200;
     color: var(--text_color);
@@ -52,7 +68,7 @@
     color: var(--text_color);
     display: flex;
     justify-content: center;
-    padding: calc(4px + 2vmax) 0;
+    padding: 13% 0;
     font-size: 1vw;
 }
 .frp_sidebar .frp_sidebar_reset{
@@ -64,8 +80,9 @@
 }
 .frp_sidebar .frp_sidebar_option .frp_option_count{
     position: absolute;
-    bottom: -1vh;
+    bottom: -0.5vw;
     left: 0;
+    text-align: center;
     color: #FFFFFF;
     font-size: 2.5vw;
     font-weight: bold;
@@ -80,18 +97,18 @@
 	width: 0;
 	height: 0;
 	border-top: 1vw solid transparent;
-	border-left: 1.5vw solid #000000;
+	border-left: 1.25vw solid #000000;
 	border-bottom: 1vw solid transparent;
 }
 .frp_sidebar .frp_triangle_left{
     position: absolute;
-    bottom: -.25vw;
-    right: 0;
+    bottom: -0.30vw;
+    right: -0.05vw;
 	width: 0;
 	height: 0;
-	border-top: .25vw solid transparent;
-	border-right: .5vw solid var(--text_color);
-	border-bottom: .25vw solid transparent;
+	border-top: 0.30vw solid transparent;
+	border-right: 0.6vw solid ;
+	border-bottom: 0.30vw solid transparent;
 }
 
 .frp_container .frp_background_image img{
@@ -123,8 +140,11 @@
     background: var(--header_menu_background);
 }
 .frp_content .frp_content_header .menu_inactive_background{
-    background: var(--header_menu_inactive_background);
+    background: transparent linear-gradient(269deg, #BBB7B7 0%, #727272 100%) 0% 0% no-repeat padding-box;
 }
+/* .frp_content .frp_content_header .menu_active_background{
+    background: var(--header_menu_inactive_background);
+} */
 .frp_content .frp_content_header .frp_header_list_menus{
     display: flex;
     gap: 4px;
@@ -226,8 +246,9 @@
 
 .frp_main_content .frp_right_side_content{
     border-left: 2px solid var(--header_border);
-    padding: 3vw;
+    padding: 3vw 3vw 0 3vw;
     width: 40%;
+    min-height: 100%;
 }
 .frp_main_content .frp_right_side_content .frp_data_title{
     font-weight: bold;
@@ -454,36 +475,57 @@
 
 /* media css */
 .frp_main_content .frp_choose_media_items{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     column-gap: 12px;
     row-gap: 5vh;
 }
 .frp_main_content .frp_choose_media_items .frp_media_item{
+    width: 180px;
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center;  */
     font-size: 12px;
     color: #575757;
     font-weight: 400;
+    align-self: flex-start;
 }
 .frp_main_content .frp_choose_media_items .frp_media_item label{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: calc(8px + 0.5vmax);
     margin-top: calc(4px + 0.5vmax);
 }
-
+.frp_main_content .frp_choose_media_items .frp_media_item img{
+    display: flex;
+    /* align-items: self-start; */
+}
+.frp_main_content .frp_choose_media_items .frp_media_item label span{
+    font-size: 12px;
+}
 /* room scene css */
 .frp_main_content .frp_choose_room_scene_items{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: calc(12px + 1.5vmax);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr; */
+    /* column-gap: calc(12px + 1.5vmax); */
     row-gap: 5vh;
 }
 .frp_main_content .frp_choose_room_scene_items .frp_room_scene_item{
     display: flex;
     flex-direction: column;
+    width: 320px;
+    min-height: 201px;
     font-size: 12px;
     color: #575757;
     font-weight: 400;
@@ -495,7 +537,7 @@
     margin-top: calc(4px + 0.5vmax);
 }
 .frp_main_content .frp_room_scene_upload_file{
-    padding: calc(24px + 4.5vmax) 0 calc(24px + 2vmax) 0 ;
+    padding: 7vh 0 0 0 ;
 }
 .frp_main_content .frp_room_scene_upload_file .frp_upload_file_what_to_see_text{
     display: flex;
@@ -521,13 +563,16 @@
     border-bottom: 2px solid var(--header_border);
     text-align: left;
     padding: 12px calc(12px + 5vmax) 12px 0;
-    font-size: 12px;
+    font-size: 1vw;
+}
+.frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table{
+    margin: 7vh 0;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table th{
     border-bottom: 2px solid #000000;
     text-align: left;
     padding: 12px calc(12px + 5vmax) 12px 0;
-    font-size: 12px;
+    font-size: 1vw;
     color: #000000;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table tr td:first-child{
@@ -538,18 +583,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(24px + 2.5vmax);
+    /* gap: ; */
 }
 .frp_right_content_room_scene_or_turn_me_on .frp_save_wishlist_get_quote_find_dealer{
     display: flex;
     justify-content: space-between;
     gap: 2px;
+    padding: 12px;
+    margin: 1vh 0 3vh 0;
 }
 .frp_right_content_room_scene_or_turn_me_on .frp_save_wishlist_get_quote_find_dealer .frp_wishlist_quote_dealer{
     background: #000000;
-    font-size: 10px;
+    font-size: 50%;
     color: #FFFFFF;
-    padding: 12px;
+    padding: .75vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -567,7 +614,8 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
-    font-size: 12px;
+    font-size: 0.5vw;
+    /* padding: 0; */
 }
 .frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons img{
     display: flex;
@@ -580,6 +628,7 @@
     gap: 8px;
     font-weight: bold;
     color: #000000;
+    font-size: 12px;
 
 }
 /* turn me on */
