@@ -27,10 +27,6 @@
         min-width: 768px;
         overflow-x: scroll;
     }
-    .frp_main_content .frp_choose_media_items{
-       display: flex;
-       justify-content: center;
-    }
 }
 .frp_container{
     display: flex;
@@ -188,6 +184,7 @@
     font-size: calc(15.2px + 0.25vw); 
     margin-top: 107px;
     margin-bottom: 73px;
+    color: var(--black);
 }
 /* choose your model */
 .frp_choose_your_model_content{
@@ -224,11 +221,12 @@
     justify-content: end;
     margin: 193px 189px 127px 0;
 }
-.frp_choose_your_model_content .frp_next_btn button{
-    padding: .5vw 2.5vw;
+.frp_model_content .frp_choose_your_model_content .frp_next_btn button{
+    padding: 8.5px 2.5vw 10.5px 2.5vw;
     border: none;
-    background: #E47C17;
+    background: var(--btn_next_backgound);
     color: #FFFFFF;
+    font-weight: bold;
 }
 
 /* size css */
@@ -248,7 +246,6 @@
     align-items: center;
     gap: 16px;
     margin: 25px 0;
-    text-wrap: ;
 }
 .frp_main_content .frp_size_fields{
     width: 12%;
@@ -267,6 +264,7 @@
 .frp_right_side_content .frp_you_are_designing_text{
     margin: 57px 0 27px 0 ;
     font-size: calc(15.2px + 0.25vw);
+    color: var(--black);
 }
 
 .frp_main_content .frp_right_side_content{
@@ -279,12 +277,13 @@
 .frp_main_content .frp_right_side_content .frp_data_title{
     font-weight: bold;
     font-size: calc(10.24px + 0.3vw);
-    color: #000000;
+    color: var(--black);
 }
 
 .frp_main_content .frp_right_side_content .frp_product_details{
     font-size: calc(10.24px + 0.3vw);
     text-wrap: nowrap;
+    color: var(--black);
 }
 .frp_main_content .frp_right_side_content .frp_product_details p{
     padding-bottom: 6px;
@@ -305,12 +304,14 @@
     background: var(--btn_back_backgound);
     border: none;
     color: #FFFFFF;
+    font-weight: bold;
 }
 .frp_main_content .frp_right_side_content .frp_btns .frp_next_btn{
-    padding: 0.5vw 2.5vw;
+    padding: 8.5px 2.5vw 10.5px 2.5vw;
     background: var(--btn_next_backgound);
     border: none;
     color: #FFFFFF;
+    font-weight: bold;
 }
 
 /* background css */
@@ -504,13 +505,11 @@
 .frp_main_content .frp_choose_media_items{
     display: flex;
     flex-direction: row;
-    gap: 12px;
     align-items: center;
-    /* justify-content: space-evenly; */
     flex-wrap: wrap;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    column-gap: 12px;
-    row-gap: 5vh;
+    column-gap: 30px;
+    row-gap: 87px;
+    padding-bottom: 12px;
 }
 .frp_main_content .frp_choose_media_items .frp_media_item{
     width: 180px;
@@ -520,7 +519,7 @@
     justify-content: space-between;
     /* align-items: center;  */
     font-size: 12px;
-    color: #575757;
+    color: var(--black);
     font-weight: 400;
     align-self: flex-start;
 }
@@ -529,8 +528,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: calc(8px + 0.5vmax);
-    margin-top: calc(4px + 0.5vmax);
+    gap: 17.84px;
+    margin-top: 8px;
 }
 .frp_main_content .frp_choose_media_items .frp_media_item img{
     display: flex;
