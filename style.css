@@ -28,6 +28,14 @@
         overflow-x: scroll;
     }
 }
+@media (max-width: 992px){
+    .frp_container .frp_content .frp_content_header .frp_header_menu_item{
+        width: calc(50px + 2vw);
+    }
+    .frp_container .frp_content .frp_content_header .frp_content_header_find_dealer{
+        width: calc(85px + 4vw);
+    }
+}
 .frp_container{
     display: flex;
     width: 100%;
@@ -51,7 +59,8 @@
     letter-spacing: 1.1px;
     font-weight: 200;
     color: var(--text_color);
-    /* padding: 1vw; */
+    text-align: center;
+    padding: 0 calc((10.24px + 0.3vw) * 2);
 }
 .frp_sidebar .frp_sidebar_option{
     position: relative;
@@ -117,6 +126,7 @@
 }
 .frp_content_header{
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     justify-content: center;
@@ -125,14 +135,24 @@
     border-top: 1px solid var(--header_border);
     border-bottom: 2px solid var(--header_border);
 }
+.frp_content .frp_content_header .frp_header_list_menus{
+    display: flex;
+    gap: 2px;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+}
 .frp_content .frp_content_header .frp_header_menu_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: calc(9.2px + 0.25vw);
-    width: calc(19.4px + 5.5vw);
-    padding: 8px 0 8px 0;
+    width: calc(40px + 4.5vw);
+    height: 100%;
+    padding: 8px;
     text-align: center;
     border: none;
     outline: none;
-    margin-right: -2px;
     color: #000000;
     background: var(--header_menu_background);
 }
@@ -142,10 +162,6 @@
 /* .frp_content .frp_content_header .menu_active_background{
     background: var(--header_menu_inactive_background);
 } */
-.frp_content .frp_content_header .frp_header_list_menus{
-    display: flex;
-    gap: 4px;
-}
 .frp_content .frp_content_header .frp_header_menu_with_love_img{
    display: flex;
    justify-content: space-between;
@@ -162,15 +178,16 @@
     align-self: center;
  }
 .frp_content .frp_content_header .frp_content_header_find_dealer{
+    width: calc(75px + 4vw);
     font-size: calc(9.2px + 0.25vw);
     background-color: #000000;
     color: var(--text_color);
     display: flex;
     justify-content: center;
-    width: calc(30px + 6vw);
     align-items: center;
-    padding: 5.5px 12px 5.5px 5.5px;
+    padding: 5.5px 12px;
     gap: 4px;
+    text-wrap: nowrap;
 }
 .frp_content .frp_content_header .frp_content_header_find_dealer img{
     width: 18px;
@@ -180,6 +197,7 @@
 .frp_content .frp_choose_content .frp_choose_your_model_text{
     font-size: calc(15.2px + 0.25vw);   
 }
+
 .frp_main_content .frp_choose_content .frp_choose_text{
     font-size: calc(15.2px + 0.25vw); 
     margin-top: 107px;
@@ -267,18 +285,17 @@
     display: flex;
     color: var(--text_color);
 }
-.frp_right_side_content .frp_you_are_designing_text{
-    margin: 57px 0 27px 0 ;
-    font-size: calc(15.2px + 0.25vw);
-    color: var(--black);
-}
 
 .frp_main_content .frp_right_side_content{
     border-left: 2px solid var(--header_border);
-    padding: 0 calc(8px + 4.5vw);
-    /* padding: 0 90px 0 90px; */
     width: 40%;
     min-height: 100%;
+}
+.frp_right_side_content .frp_you_are_designing_text{
+    margin: 57px 0 27px 0 ;
+    padding-left: calc(8px + 4.5vw);
+    font-size: calc(15.2px + 0.25vw);
+    color: var(--black);
 }
 .frp_main_content .frp_right_side_content .frp_data_title{
     font-weight: bold;
@@ -288,6 +305,7 @@
 
 .frp_main_content .frp_right_side_content .frp_product_details{
     font-size: calc(10.24px + 0.3vw);
+    padding-left: calc(8px + 4.5vw);
     text-wrap: nowrap;
     color: var(--black);
 }
@@ -396,7 +414,7 @@
 }
 
 .frp_locate_dealer_search_div .frp_locate_dealer_fields_with_location_content{
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     background: #DADADA;
 }
 
@@ -492,7 +510,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 8px;
+    padding:12px 8px;
     font-size: calc(9.2px + 0.25vw);
 }
 .frp_locate_dealer_search_div .frp_locate_dealer_locate_content_data .locate_data_item_details{
@@ -573,6 +591,7 @@
 }
 .frp_main_content .frp_room_scene_upload_file{
     padding: 7vh 0 0 0 ;
+    margin-bottom: 24px;
 }
 .frp_main_content .frp_room_scene_upload_file .frp_upload_file_what_to_see_text{
     display: flex;
@@ -595,24 +614,28 @@
 }
 /* .frp_right_side_content .frp_room_scene_right_content_details_data table, */
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table td{
-    border-bottom: 2px solid var(--header_border);
+    border-bottom: 1px solid var(--black);
     text-align: left;
     padding: 18px calc(8px + 4vw) 18px 0;
-    font-size: calc(9.28px + 0.35vw);
+    font-size: calc(8.28px + 0.35vw);
+    color: var(--black);
+    text-wrap: nowrap;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table{
     margin: 90px 0;
-    padding: 0 24px;
+    padding: 0 12px;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table th{
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--black);
     text-align: left;
     padding: 18px calc(8px + 4vw) 18px 0;
-    font-size: calc(10.24px + 0.30vw);
-    color: #000000;
+    font-size: calc(8.28px + 0.35vw);
+    font-weight: bold;
+    color: var(--black);
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table tr td:first-child{
     color: #E47C17;
+    font-weight: 600;
 }
 /*  cls */
 .frp_right_content_room_scene_or_turn_me_on{
@@ -625,7 +648,7 @@
     display: flex;
     justify-content: space-between;
     gap: 2px;
-    padding: 12px;
+    padding: 0 12px;
     margin-bottom: 52px;
 }
 .frp_right_content_room_scene_or_turn_me_on .frp_save_wishlist_get_quote_find_dealer .frp_wishlist_quote_dealer{
@@ -649,8 +672,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: calc(4.32px + 0.4vw);
     margin-bottom: 52px;
+    padding: 0 12px;
 }
 .frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons img{
     width: calc(12px + 0.75vw);
@@ -665,7 +689,9 @@
     font-weight: bold;
     color: #000000;
     font-size: calc(9.2px + 0.25vw);
-
+}
+.frp_right_side_content .frp_right_content_room_scene_or_turn_on_icons .share_icon_text img{
+    width: calc(9.2px + 0.25vw);
 }
 /* turn me on */
 .frp_main_content .content_turn_on_me{
