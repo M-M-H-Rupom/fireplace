@@ -170,12 +170,14 @@
    font-size: 14px;
 }
 .frp_content .frp_content_header .frp_content_header_love_img{
-   margin-right: 8px;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
    /* padding: 4px 0 0 0; */
 }
 .frp_content .frp_content_header .frp_content_header_love_img img{
     display: flex;
-    align-self: center;
+    align-items: center;
  }
 .frp_content .frp_content_header .frp_content_header_find_dealer{
     width: calc(75px + 4vw);
@@ -294,6 +296,7 @@
 .frp_right_side_content .frp_you_are_designing_text{
     margin: 57px 0 27px 0 ;
     padding-left: calc(8px + 4.5vw);
+    padding-right: calc(8px + 0.5vw);
     font-size: calc(15.2px + 0.25vw);
     color: var(--black);
 }
@@ -306,6 +309,7 @@
 .frp_main_content .frp_right_side_content .frp_product_details{
     font-size: calc(10.24px + 0.3vw);
     padding-left: calc(8px + 4.5vw);
+    padding-right: calc(20px + 1vw);
     text-wrap: nowrap;
     color: var(--black);
 }
