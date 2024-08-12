@@ -202,8 +202,8 @@
 
 .frp_main_content .frp_choose_content .frp_choose_text{
     font-size: calc(15.2px + 0.25vw); 
-    margin-top: 107px;
-    margin-bottom: 73px;
+    margin-top: calc(30.2px + 4vw);
+    margin-bottom: calc(20.2px + 2.75vw);
     color: var(--black);
 }
 /* choose your model */
@@ -251,15 +251,15 @@
 
 /* size css */
 
-.frp_choose_content{
-    /* padding: 3vw; */
-    margin-left: 80px;
-}
+/* .frp_choose_content{
+} */
 .frp_main_content .frp_choose_content{
-    width: 60%;
+    width: 57%;
+    margin-left: calc(22.4px + 3vw);
+    padding-right: 12px;
 }
 .frp_main_content .frp_choose_content .frp_choose_your_size_text{
-    margin: 57px 0 27px 0;
+    margin: calc(23.4px + 1.75vw) 0 calc(11.64px + 0.8vw) 0;
 }
 .frp_choose_size_options section{
     display: flex;
@@ -290,7 +290,7 @@
 
 .frp_main_content .frp_right_side_content{
     border-left: 2px solid var(--header_border);
-    width: 40%;
+    width: 43%;
     min-height: 100%;
 }
 .frp_right_side_content .frp_you_are_designing_text{
@@ -572,18 +572,20 @@
 /* room scene css */
 .frp_main_content .frp_choose_room_scene_items{
     display: flex;
-    gap: 24px;
+    gap: calc(18.4px + 1.75vw);
+    row-gap: calc(12.8px + 1vw);
     flex-wrap: wrap;
     /* grid-template-columns: 1fr 1fr; */
     /* column-gap: calc(12px + 1.5vmax); */
-    row-gap: 5vh;
+    /* row-gap: 5vh; */
 }
 .frp_main_content .frp_choose_room_scene_items .frp_room_scene_item{
     display: flex;
     flex-direction: column;
-    width: 320px;
-    min-height: 201px;
-    font-size: 12px;
+    /* text-align: center; */
+    width: calc(32px + 15vw);
+    min-height: calc(50px + 7.81vw);
+    font-size: calc(9.2px + 0.25vw);
     color: #575757;
     font-weight: 400;
 }
@@ -592,6 +594,10 @@
     align-items: center;
     gap: 8px;
     margin-top: calc(4px + 0.5vmax);
+}
+.frp_main_content .frp_choose_room_scene_items .frp_room_scene_item label input{
+    display: flex;
+    align-items: center;
 }
 .frp_main_content .frp_room_scene_upload_file{
     padding: 7vh 0 0 0 ;
@@ -620,19 +626,19 @@
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table td{
     border-bottom: 1px solid var(--black);
     text-align: left;
-    padding: 18px calc(8px + 4vw) 18px 0;
+    padding: calc(10.32px + 0.4vw) calc(8px + 4vw) calc(10.32px + 0.4vw) 0;
     font-size: calc(8.28px + 0.35vw);
     color: var(--black);
     text-wrap: nowrap;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table{
-    margin: 90px 0;
+    margin: calc(32.4px + 3vw) 0;
     padding: 0 12px;
 }
 .frp_right_side_content .frp_room_scene_or_turn_on_right_content_data_table th{
     border-bottom: 2px solid var(--black);
     text-align: left;
-    padding: 18px calc(8px + 4vw) 18px 0;
+    padding: calc(10.32px + 0.4vw) calc(8px + 4vw) calc(10.32px + 0.4vw) 0;
     font-size: calc(8.28px + 0.35vw);
     font-weight: bold;
     color: var(--black);
@@ -700,12 +706,12 @@
 /* turn me on */
 .frp_main_content .content_turn_on_me{
     padding: 0;
+    margin: 0;
 }
 .frp_main_content .frp_turn_on_me_background_img{
     position: relative;
-    z-index: -99;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .frp_main_content .frp_turn_on_me_background_img img{
     width: 100%;
