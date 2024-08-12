@@ -285,6 +285,7 @@
 }
 .frp_content .frp_main_content{
     display: flex;
+    /* height: 100%; */
     color: var(--text_color);
 }
 
@@ -294,7 +295,7 @@
     min-height: 100%;
 }
 .frp_right_side_content .frp_you_are_designing_text{
-    margin: 57px 0 27px 0 ;
+    margin: calc(23.4px + 1.75vw) 0 calc(11.64px + 0.8vw) 0;
     padding-left: calc(8px + 4.5vw);
     padding-right: calc(8px + 0.5vw);
     font-size: calc(15.2px + 0.25vw);
@@ -319,7 +320,7 @@
 .frp_main_content .frp_right_side_content .frp_product_image{
     display: flex;
     justify-content: center;
-    margin: 180px 0 270px 0;
+    margin: calc(50px + 6.75vw) 0 calc(70px + 10.5vw) 0;
 }
 .frp_main_content .frp_right_side_content .frp_btns{
     display: flex;
@@ -348,7 +349,8 @@
 /* background css */
 .frp_main_content .frp_choose_fields{
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
+    gap: calc(11.28px + 0.85vw);
 }
 .frp_main_content .frp_choose_fields .frp_background{
     display: flex;
@@ -359,7 +361,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-top: 15px;
+    margin-top: calc(10px + 0.25vw);
     font-size: 12px;
     color: #000000;
 }
@@ -538,9 +540,9 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 30px;
-    row-gap: 87px;
-    padding-bottom: 12px;
+    column-gap: calc(11.8px + 1vw);
+    row-gap: calc(18px + 3.5vw);
+    padding-bottom: calc(7.2px + 0.25vw);
 }
 .frp_main_content .frp_choose_media_items .frp_media_item{
     width: 180px;
@@ -548,7 +550,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center;  */
     font-size: 12px;
     color: var(--black);
     font-weight: 400;
@@ -711,11 +712,15 @@
 .frp_main_content .frp_turn_on_me_background_img{
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    background: url(assets/images/room_img.jpeg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position-x: -280px;
 }
 .frp_main_content .frp_turn_on_me_background_img img{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 .frp_main_content .frp_turn_on_me_fire_img{
     position: absolute;
@@ -733,28 +738,18 @@
 /* fireplace design studio */
 .frp_fireplace_container{
     position: relative;
-    /* background-image: ;
+    /* background: url(assets/images/background_img_2.jpeg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #575757; */
+    background-repeat: no-repeat; */
 }
-/* .frp_container .frp_fireplace_background_img{
-    width: 100%;
-    min-height: 100vh;
-} */
 
-/* .frp_container .frp_fireplace_fire_img{
-    position: absolute;
-    top: 60%;
-    left: 20%;
-} */
 /* firebase design studio */
 .frp_fireplace_container .frp_fireplace_design_studio_div{
     position: absolute;
     top: 0;
     right: 18%;
-    width: 27%;
+    width: 30%;
     min-height: auto;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
@@ -765,9 +760,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 24px; */
-    /* background: #000000 0% 0% no-repeat padding-box; */
-    /* background: #000000 0% 0% no-repeat padding-box; */
     opacity: 1;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -775,21 +767,30 @@
 .frp_fireplace_design_studio_div .frp_ortal_logo{
     display: flex;
     justify-content: center;
-    margin: 91px 0 341.67px 0;
+    margin: calc(30px + 3.15vw) 0 calc(100px + 12.5vw) 0;
 }
 .frp_fireplace_design_studio_div .frp_fireplace_text .frp_design_studio{
-    margin-top: -16px;
+    /* margin-top: -16px; */
+}
+.frp_container .frp_fireplace_text{
+    padding: 0 24px;
 }
 .frp_container .frp_fireplace_text .frp_fireplace{
-    font-size: calc(25px + 2.5vw);
+    font-size: calc(18px + 2.75vw);
     font-weight: lighter;
 }
 .frp_container .frp_fireplace_text .frp_design_studio{
     letter-spacing: 2.74px;
     font-size: calc(15.2px + 1.5vw);
-    margin-bottom: 60px;
+    margin-bottom: calc(20px + 2vw);
     color: #D9D9D9;
-    
+    text-align: center;
+    line-height: 1.2;
+}
+.frp_container .frp_fireplace_background_img{
+    width: 100%;
+    height: 100%;
+    /* background: url(/assets/images/background_img_2.jpeg); */
 }
 .frp_fireplace_design_studio_div .frp_explore_design_text{
     text-align: center;
@@ -797,14 +798,14 @@
     line-height: 1.30;
     color: #D9DBDF;
     font-size: calc(10.6px + 0.75vw);
-    margin-bottom: 45px;
+    margin-bottom: calc(16.2px + 1.5vw);
 }
 .frp_fireplace_design_studio_div .frp_lets_roll{
-    margin-bottom: 201px;
+    margin-bottom: calc(60px + 7.3vw);
 }
 .frp_fireplace_design_studio_div .frp_lets_roll .frp_btn{
     background: var(--btn_next_backgound);
-    padding: 6px calc(36px + 2.25vw) 11px calc(36px + 2.25vw);
+    padding: 6px calc(20px + 3.125vw) 6px calc(20px + 3.125vw);
     outline: none;
     color: #FFFFFF;
     border: none;
