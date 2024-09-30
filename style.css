@@ -210,13 +210,14 @@
 .frp_choose_your_model_content{
     display: flex;
     flex-direction: column;
+     margin-left: calc(22.4px + 3vw);
     /* margin-top: 40vh; */
     /* align-items: center; */
     /* padding: 4vw; */
 }
 .frp_choose_your_model_content .frp_choose_your_model_text{
     /* padding: 2vw 0 3vw 0; */
-    margin: 337px 0 50px 0;
+    margin: calc(23.4px + 1.75vw) 0 calc(11.64px + 0.8vw) 0;
 }
 .frp_choose_your_model_content .frp_choose_model_options{
     display: flex;
